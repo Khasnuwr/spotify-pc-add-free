@@ -1,0 +1,57 @@
+﻿
+	Особенности репака:
+
+  1. Совмещённые в одном дистрибутиве установка программы или распаковка портативной** версии
+  2. Мультиязычный интерфейс (включая русский)
+  3. Заблокирована баннерная и аудио реклама (mrpond)
+  4. Применены модификации (amd64fox)
+  5. Отключена автозагрузка программы при старте системы
+  6. Добавлен скрипт для очистки кэша Spotify* (amd64fox)
+  7. Возможность подхвата и автокопирования пользовательского файла настроек программы prefs и импорта настроек
+     из settings.reg (если находится рядом с инсталлятором)
+
+     *SpotifyCleanCache.bat - скрипт для очистки кэша Spotify по по трем правилам:
+      - файлы старше 7 дней из папки %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - для portable)
+      - файлы из папки %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - для portable), если её размер превышает 499 Мб
+      - файл mercury.db из папки %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - для portable), 
+        если его размер превышает ~30 Мб
+
+    **Портативная версия представлена в двух вариантах PAF или yaP Launcher*** (выбор при распаковке)
+      yaP Launcher выбран за хранение и использование пользовательских файлов непосредственно в папке 
+      с portable, т.е. он НЕ будет, как PAF, временно перемещать их в профиль пользователя, а значит 
+      и лишний раз изнашивать системный диск. Увы, на yaP Launcher есть традиционный небольшой ЛОЖНЫЙ детект.
+      PAF - на случай возникновения каких-либо проблем с yaP Launcher
+
+   ***ВНИМАНИЕ!!! Для работы с симлинками yaP Launcher требует повышенных прав. Поэтому НЕ рекомендуется его 
+                  использование в системах с включённым UAC.
+
+    "Тихая" установка с ключами /SILENT или /VERYSILENT (или файлом "Silent Install.cmd")
+    Для "Тихой" установки портативной версии дополнительный ключ /PORTABLE=1 (или файлом "Unpack Portable.cmd")
+
+ ******************************************************************************************************************
+
+	Features repack:
+
+  1. Installation of the program combined with unpacking of the portable* version
+  2. Multilingual interface
+  3. Blocked banner and audio ads (mrpond)
+  4. Modifications (amd64fox)
+  5. Disabled run of the program at system startup
+  6. Added script to clear Spotify cache* (amd64fox)
+  7. The ability to pick up and auto-copy a user customization file prefs import settings from settings.reg 
+
+     *SpotifyCleanCache is a script for clearing Spotify cache according to three rules:
+      - files older than 7 days in %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - for portable)
+      - files in the %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - for portable) folder if it is larger than 499 MB
+      - mercury.db file from %LOCALAPPDATA%\Spotify\Data (Data\SpotifyLOCAL\Data - for portable), 
+        if its size exceeds ~30 MB
+
+    **The portable version is represented in two variants PAF or yaP Launcher (selection when decompressing)
+      Alas, there is a traditional little FALSE detective on yaP Launcher.
+
+   ***ATTENTION!!! yaP Launcher requires elevated rights to work with symlinks. Therefore yAP-portable 
+                   NOT recommended if UAC enabled. 
+
+
+   "Silent" installation with the /SILENT or /VERYSILENT switches (or the Silent Install.cmd file)
+   For the "silent" unpacking of the portable version, the additional key /PORTABLE=1 (or the file "Unpack Portable.cmd")
